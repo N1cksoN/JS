@@ -1,0 +1,22 @@
+{% extends "./index.html" %}
+
+{% block content %}
+<form action="/login" method="post" enctype="multipart/form-data">
+
+<h1>Login</h1>
+    <p>Please fill this form to login.</p>
+    <hr>
+<label for="login"><b>Login</b></label>
+<div class="container-login"> 
+	<input type="text" placeholder="Enter Login" name="login" required>
+</div>
+<label for="password"><b>Password</b></label>
+<div class="container-password"> 
+	<input type="password" placeholder="Enter Password" name="password" required>
+</div>
+<div class="container-submit"> 
+	<input type="submit" value="send"> 
+</div>
+</form>
+
+{% endblock %}

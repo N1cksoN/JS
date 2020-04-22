@@ -1,0 +1,8 @@
+body{
+	margin-left: 3px;
+	height: 2000px;
+}
+
+.container-login,.container-password,.container-submit {
+	text-align: left;
+}
