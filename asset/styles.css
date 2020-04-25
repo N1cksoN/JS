@@ -1,0 +1,9 @@
+html, body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.container-login,.container-password,.container-submit {
+	text-align: left;
+}
