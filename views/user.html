@@ -5,12 +5,14 @@
     <p>Information about my account.</p>
     <hr>
 	{% if user %}
+		{% if user.avatar %}
+			<img src="/avatar/{{ user.avatar }}" />
+		{% endif %}
 		<div>id: {{user.id}}</div>
 		<div>login: {{user.login}}</div>
 		<div>password: {{user.password}}</div>
 		<hr>
-		<div class="container logout">
-    	<p>Want to exit from your page?<a href="/logout"> Logout</a>.</p>
-    </div>
+    <p> <a href="/user/{{ user.id }}/edit">Edit</a>.</p>
+		<p class="container logout"> Want to exit from your page?<a href="/logout"> Logout</a>.</p>
 	{% endif %}
 {% endblock %} 

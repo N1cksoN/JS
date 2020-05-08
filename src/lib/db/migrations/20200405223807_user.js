@@ -2,6 +2,7 @@ const table = ({}) => async (t) => {
 	t.increments('userId').primary();
 	t.string('login', 32).notNullable().unique();
 	t.string('password', 32).notNullable();
+	t.string('avatar', 64);
 };
 
 module.exports = {

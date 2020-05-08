@@ -8,4 +8,4 @@ register({
 	],
 });
 
-module.exports = require('.src/app.js');
+module.exports = require('./src/app.js');

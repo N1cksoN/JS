@@ -20,6 +20,10 @@ class User extends Model{
 					minLength: 1,
 					maxLength: 32,
 				},
+				avatar : {
+					type: 'string',
+					maxLength: 64,
+				},
 			},
 		};
 	}
@@ -28,6 +32,7 @@ class User extends Model{
 			id: this.userId,
 			login: this.login,
 			password: this.password,			
+			avatar: this.avatar,			
 		};
 	}
 };

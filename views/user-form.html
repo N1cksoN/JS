@@ -1,0 +1,30 @@
+{% extends "./index.html" %}
+
+{% block content %}
+{% if user %}
+<form action="/user/{{ user.id }}/edit" method="post" enctype="multipart/form-data">    
+    <label for="avatar"><b>Avatar</b></label>
+    <div class="container-avatar"> 
+        {% if user.avatar %}
+            <img src="/avatar/{{ user.avatar }}" />
+        {% endif %}
+        <input type="file" name="avatar" />
+    </div>
+    <label for="login"><b>Login</b></label>
+    <div class="container-login"> 
+        <input type="text" placeholder="Enter Login" name="login" value="{{ user.login }}" readonly="readonly" />
+    </div>
+    <label for="password"><b>Password</b></label>
+    <div class="container-password"> 
+        <input type="password" placeholder="Enter Password" name="password" value="{{ user.password }}" required>
+    </div>
+     <div class="container-password"> 
+        <input type="password" placeholder="Enter Password" name="password2" value="{{ user.password }}" required>
+        <small id="passHelp" class="form-text text-muted">Password should contain from 1 to 32 digits</small>
+    </div>
+    <div class="container-submit"><input type="submit" value="send"></div>
+</form>
+{% else %}
+    user not found
+{% endif %}
+{% endblock %}
