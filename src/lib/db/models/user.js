@@ -21,7 +21,7 @@ class User extends Model{
 					maxLength: 32,
 				},
 				avatar : {
-					type: 'string',
+					type: ['null', 'string'],
 					maxLength: 64,
 				},
 			},

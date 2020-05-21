@@ -6,11 +6,13 @@
     <hr>
 	{% if user %}
 		{% if user.avatar %}
+		<div class="container-avatar">
 			<img src="/avatar/{{ user.avatar }}" />
+		</div>	
 		{% endif %}
-		<div>id: {{user.id}}</div>
-		<div>login: {{user.login}}</div>
-		<div>password: {{user.password}}</div>
+		<div class="container-id">id: {{user.id}}</div>
+		<div class="container-login">login: {{user.login}}</div>
+		<div class="container-password">password: {{user.password}}</div>
 		<hr>
     <p> <a href="/user/{{ user.id }}/edit">Edit</a>.</p>
 		<p class="container logout"> Want to exit from your page?<a href="/logout"> Logout</a>.</p>

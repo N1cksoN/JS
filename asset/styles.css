@@ -4,6 +4,20 @@ html, body {
 	padding: 0;
 }
 
-.container-login,.container-password,.container-submit {
+.container-avatar {
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+}
+
+.container-avatar img {
+	width: 320px;
+}
+
+.container-id,
+.container-login,
+.container-password,
+.container-submit {
 	text-align: left;
 }
+
